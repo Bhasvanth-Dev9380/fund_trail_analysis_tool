@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV to BigchainDB</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #uploadForm {
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 80%;
+            height: 80%;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload CSV to BigchainDB</h1>
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv">
+        <button type="submit">Upload</button>
+    </form>
+    <iframe id="dashFrame" src="" style="display: none;"></iframe>
+    <script>
+        document.getElementById('uploadForm').onsubmit = function () {
+            setTimeout(function () {
+                document.getElementById('dashFrame').src = "http://localhost:8050";
+                document.getElementById('dashFrame').style.display = "block";
+            }, 3000); // Adjust delay as needed
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^1.7.2",
+    "bigchaindb-driver": "^4.3.0",
+    "bip39": "^3.1.0",
+    "csv-parser": "^3.0.0"
+  }
+}
