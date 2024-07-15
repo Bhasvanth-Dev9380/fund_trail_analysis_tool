@@ -4,4 +4,5 @@
 
 
 2. We use script.js to perform post and retrieve transactions using "node script.js"
+
 3.The entire process is automated using app.py using flask
